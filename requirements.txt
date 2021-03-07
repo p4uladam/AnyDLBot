@@ -1,7 +1,7 @@
 aiohttp
 beautifulsoup4
 git+git://github.com/google/chatbase-python.git
-hachoir
+hachoir==3.1.1
 numpy
 Pillow
 Pyrogram
