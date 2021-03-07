@@ -16,7 +16,7 @@ An Open Source ALL-In-One Telegram RoBot, that can do lot of things.
 
 #### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ALENTL/AnyDLBot)
 
 #### The Hard Way
 
@@ -30,6 +30,7 @@ python bot.py
 ```
 
 - For FeedBack and Suggestions, please feel free to say in [@SpEcHlDe](https://telegram.dog/ThankTelegram)
+- If you liked the project please mention [@ALENTL](https://t.me/ALEN_TL) 
 
 #### LICENSE
 - GPLv3

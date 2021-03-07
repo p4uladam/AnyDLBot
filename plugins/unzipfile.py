@@ -29,7 +29,7 @@
 # from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 
 
-# @pyrogram.Client.on_message(pyrogram.Filters.command(["zipcikar"]))
+# @pyrogram.Client.on_message(pyrogram.filters.command(["zipcikar"]))
 # async def unzip(bot, update):
 #     if update.from_user.id not in Config.AUTH_USERS:
 #         await bot.delete_messages(

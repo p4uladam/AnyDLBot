@@ -29,7 +29,7 @@ from helper_funcs.help_Nekmo_ffmpeg import generate_screen_shots
 from helper_funcs.display_progress import progress_for_pyrogram
 
 
-@pyrogram.Client.on_message(pyrogram.Filters.command(["generatescss"]))
+@pyrogram.Client.on_message(pyrogram.filters.command(["generatescss"]))
 async def generate_screen_shot(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
         await bot.delete_messages(
@@ -88,7 +88,7 @@ async def generate_screen_shot(bot, update):
                     if os.path.exists(image):
                         if i == 0:
                             media_album_p.append(
-                                pyrogram.InputMediaPhoto(
+                                pyrogram.types.InputMediaPhoto(
                                     media=image,
                                     caption=caption,
                                     parse_mode="html"
@@ -96,7 +96,7 @@ async def generate_screen_shot(bot, update):
                             )
                         else:
                             media_album_p.append(
-                                pyrogram.InputMediaPhoto(
+                                pyrogram.types.InputMediaPhoto(
                                     media=image
                                 )
                             )
