@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# (c) ALEN TL
+
 # the logging things
 import logging
 logging.basicConfig(level=logging.DEBUG,
@@ -236,7 +240,6 @@ async def youtube_dl_call_back(bot, update):
                     img.resize((90, height))
                 img.save(thumb_image_path, "JPEG")
                 # https://pillow.readthedocs.io/en/3.1.x/reference/Image.html#create-thumbnails
-                
             else:
                 thumb_image_path = None
             start_time = time.time()
@@ -319,9 +322,9 @@ async def youtube_dl_call_back(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @TGBotsZ"
+                caption = "© @midukkandl_bot"
                 if is_w_f:
-                    caption = "/upgrade to Plan D to remove the watermark\n© @AnyDLBot"
+                    caption = "/upgrade to Plan D to remove the watermark\n© @midukkandl_bot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
