@@ -1,7 +1,7 @@
 class Translation(object):
     START_TEXT = """Hi. Thank You for using me.
 /help to know how to use me
-TL;DR, Please send a direct (video) link, and I will try to upload on Telegram.
+Please send a direct (video) link, and I will try to upload on Telegram.
 © @midukkandl_bot
 Subscribe @focusgrpchannel if you 💔 using this bot.
 """
@@ -60,8 +60,8 @@ Please Message from the ID you want plan to be activated 🙏"""
     UPLOAD_START = "trying to upload"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "Please rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nPlease rate me if you find me useful. https://t.me/tlgrmcbot?start=anydl_bot-bot \nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "[Please donate me if you find me useful](https://paypal.me/ALENTL)"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n[Please donate me if you find me useful.](https://paypal.me/ALENTL)\nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@ALEN_TL</a>"
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
