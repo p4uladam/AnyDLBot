@@ -2,12 +2,12 @@ class Translation(object):
     START_TEXT = """Hi. Thank You for using me.
 /help to know how to use me
 TL;DR, Please send a direct (video) link, and I will try to upload on Telegram.
-© Youtube_Youtube_downloaderbot
+© @midukkandl_bot
 Subscribe @focusgrpchannel if you 💔 using this bot.
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
     ABS_TEXT = " Please don't be selfish."
-    UPGRADE_TEXT = """@Youtube_Youtube_downloaderbot Paid Plans
+    UPGRADE_TEXT = """@midukkandl_bot Paid Plans
 -------
 Plan: FREE
 Filesize limit: 1500 MB
@@ -33,8 +33,8 @@ Daily limit: UNLIMITED
 
 FEATURES:
 👉 All Above Features +
-👉 Convert To Telegram Audio, the media sent as Telegram Documents (https://telegram.dog/AnyDLBot)
-👉 Convert To Streamable Video, any Telegram file (https://telegram.dog/AnyDLBot)
+👉 Convert To Telegram Audio, the media sent as Telegram Documents (https://telegram.dog/midukkandl_bot)
+👉 Convert To Streamable Video, any Telegram file (https://telegram.dog/midukkandl_bot)
 👉 ReName Telegram files, with custom thumbnail support (https://t.me/SpEcHlDe/610)
 -------
 Plan: D
@@ -80,8 +80,8 @@ Expires on: {}"""
     HELP_USER = """There are multiple things I can do:
 👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video / File Formats, with custom file name and custom thumbnail support</a>
 👉 <a href="https://t.me/SpEcHlDe/609">Upload as file from any HTTP link, with custom thumbnail support</a>
-👉 <a href="https://telegram.dog/AnyDLBot">Convert To Streamable Video, any Telegram file</a>
-👉 <a href="https://telegram.dog/AnyDLBot">Convert To Telegram Audio, the media sent as Telegram Documents</a>
+👉 <a href="https://telegram.dog/midukkandl_bot">Convert To Streamable Video, any Telegram file</a>
+👉 <a href="https://telegram.dog/midukkandl_bot">Convert To Telegram Audio, the media sent as Telegram Documents</a>
 👉 <a href="https://t.me/SpEcHlDe/610">ReName Telegram files, with custom thumbnail support</a>
 👉 <a href="https://t.me/SpEcHlDe/625">Generate Custom Thumbnail by sending two photos in a Media Album</a>
 👉 <a href="https://t.me/SpEcHlDe/653">Trim large videos</a>, and <a href="https://t.me/SpEcHlDe/652">Take Screenshots</a> of Telegram media files.
@@ -93,7 +93,7 @@ Send /me to know current plan details"""
     REPLY_TO_DOC_FOR_C2V = "Reply to a Telegram media to convert"
     REPLY_TO_DOC_FOR_SCSS = "Reply to a Telegram media to get screenshots"
     REPLY_TO_DOC_FOR_RENAME_FILE = "Reply to a Telegram media to /rename with custom thumbnail support"
-    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @AnyDLBot"
+    AFTER_GET_DL_LINK = "Direct Link <a href='{}'>Generated</a> valid for {} days.\n© @midukkandl_bot"
     FF_MPEG_RO_BOT_RE_SURRECT_ED = """Syntax: /trim HH:MM:SS [HH:MM:SS]"""
     FF_MPEG_RO_BOT_STEP_TWO_TO_ONE = "First send /downloadmedia to any media so that it can be downloaded to my local. \nSend /storageinfo to know the media, that is currently downloaded."
     FF_MPEG_RO_BOT_STOR_AGE_INFO = "Video Duration: {}\nSend /clearffmpegmedia to delete this media, from my storage.\nSend /trim HH:MM:SS [HH:MM:SS] to cu[l]t a small photo / video, from the above media."
