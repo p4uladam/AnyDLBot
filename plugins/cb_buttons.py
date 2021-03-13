@@ -48,6 +48,11 @@ from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
+# https://stackoverflow.com/a/37631799/4723940
+from PIL import Image
+
 
 @pyrogram.Client.on_callback_query()
 async def button(bot, update):

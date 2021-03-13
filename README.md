@@ -1,4 +1,4 @@
-## [AnyDLBot](https://telegram.dog/AnyDLBot)
+## [AnyDLBot #V2](https://telegram.dog/midukkandl_bot)
 ---
 
 An Open Source ALL-In-One Telegram RoBot, that can do lot of things.
@@ -29,8 +29,7 @@ cp sample_config.py config.py
 python bot.py
 ```
 
-- For FeedBack and Suggestions, please feel free to say in [@SpEcHlDe](https://telegram.dog/ThankTelegram)
-- If you liked the project please mention [@ALENTL](https://t.me/ALEN_TL) 
+- For FeedBack and Suggestions, please feel free to say in [@ALENTL](https://telegram.dog/ALEN_TL)
 
 #### LICENSE
 - GPLv3

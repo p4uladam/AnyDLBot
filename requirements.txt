@@ -4,9 +4,10 @@ git+git://github.com/google/chatbase-python.git
 hachoir
 numpy
 Pillow
-Pyrogram
+pyrogram
 requests
 tgcrypto
 youtube-dl
 pydrive
 pySmartDL
+hachoir
