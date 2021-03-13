@@ -10,8 +10,6 @@ import numpy as np
 import pyrogram
 from PIL import Image
 
-from np import *
-
 from helper_funcs.chat_base import TRChatBase
 # the Strings used for this "thing"
 from translation import Translation
