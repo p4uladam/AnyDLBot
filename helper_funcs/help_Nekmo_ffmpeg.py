@@ -8,12 +8,11 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
 import asyncio
+import ffmpeg
 import os
+import subprocess
 import time
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
 
 
 async def place_water_mark(input_file, output_file, water_mark_file):

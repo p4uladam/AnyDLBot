@@ -48,17 +48,24 @@ from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 from plugins.youtube_dl_button import youtube_dl_call_back
 from plugins.dl_button import ddl_call_back
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
+# https://stackoverflow.com/a/37631799/4723940
+from PIL import Image
+
 
 @pyrogram.Client.on_callback_query()
 async def button(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    # logger.info(update)
+    if str(update.from_user.id) in Config.BANNED_USERS:
+        await bot.edit_message_text(
             chat_id=update.message.chat.id,
-            message_ids=update.message.message_id,
-            revoke=True
+            text=Translation.ABUSIVE_USERS,
+            message_id=update.message.message_id,
+            disable_web_page_preview=True,
+            parse_mode="html"
         )
         return
-    # logger.info(update)
     cb_data = update.data
     if ":" in cb_data:
         # unzip formats
@@ -72,8 +79,7 @@ async def button(bot, update):
             )
             return False
         zip_file_contents = os.listdir(extract_dir_path)
-        type_of_extract  = cb_data.split(":")
-        index_extractor = cb_data.split(":")
+        type_of_extract, index_extractor = cb_data.split(":")
         if index_extractor == "NONE":
             try:
                 shutil.rmtree(extract_dir_path)
@@ -99,7 +105,8 @@ async def button(bot, update):
                     progress=progress_for_pyrogram,
                     progress_args=(
                         Translation.UPLOAD_START,
-                        update.message,
+                        update.message.message_id,
+                        update.message.chat.id,
                         start_time
                     )
                 )
@@ -128,7 +135,8 @@ async def button(bot, update):
                 progress=progress_for_pyrogram,
                 progress_args=(
                     Translation.UPLOAD_START,
-                    update.message,
+                    update.message.message_id,
+                    update.message.chat.id,
                     start_time
                 )
             )

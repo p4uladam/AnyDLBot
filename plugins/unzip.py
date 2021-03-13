@@ -31,14 +31,14 @@ from helper_funcs.display_progress import progress_for_pyrogram, humanbytes
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["unzip"]))
 async def unzip(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    TRChatBase(update.from_user.id, update.text, "unzip")
+    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.NOT_AUTH_USER_TEXT,
+            reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "unzip")
     saved_file_path = Config.DOWNLOAD_LOCATION + \
         "/" + str(update.from_user.id) + ".unzip.zip"
     if os.path.exists(saved_file_path):
@@ -58,11 +58,7 @@ async def unzip(bot, update):
                 message=reply_message,
                 file_name=saved_file_path,
                 progress=progress_for_pyrogram,
-                progress_args=(
-                    Translation.DOWNLOAD_START,
-                    a,
-                    c_time
-                )
+                progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
             )
         except (ValueError) as e:
             await bot.edit_message_text(
@@ -87,12 +83,10 @@ async def unzip(bot, update):
             )
             try:
                 command_to_exec = [
-                    "unzip",
-                    "-o",
-                    saved_file_path,
-                    # extract_dir_path,
-                    "-d",
-                    extract_dir_path
+                    "7z",
+                    "e",
+                    "-o" + extract_dir_path,
+                    saved_file_path
                 ]
                 # https://stackoverflow.com/a/39629367/4723940
                 logger.info(command_to_exec)
@@ -128,7 +122,7 @@ async def unzip(bot, update):
                     i = i + 1
                 cb_string = "ZIP:{}:ZIP".format("ALL")
                 inline_keyboard.append([
-                    pyrogram.types.InlineKeyboardButton(
+                    pyrogram.InlineKeyboardButton(
                         "Upload All Files",
                         callback_data=cb_string.encode("UTF-8")
                     )

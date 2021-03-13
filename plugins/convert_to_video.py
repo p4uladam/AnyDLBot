@@ -34,14 +34,14 @@ from PIL import Image
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["converttovideo"]))
 async def convert_to_video(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    TRChatBase(update.from_user.id, update.text, "converttovideo")
+    if str(update.from_user.id) not in Config.SUPER3X_DLBOT_USERS:
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.NOT_AUTH_USER_TEXT,
+            reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "converttovideo")
     if update.reply_to_message is not None:
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -56,9 +56,7 @@ async def convert_to_video(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
+                Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time
             )
         )
         if the_real_download_location is not None:
@@ -117,9 +115,7 @@ async def convert_to_video(bot, update):
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
-                    Translation.UPLOAD_START,
-                    a,
-                    c_time
+                    Translation.UPLOAD_START, a.message_id, update.chat.id, c_time
                 )
             )
             try:

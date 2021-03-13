@@ -32,14 +32,16 @@ from helper_funcs.display_progress import progress_for_pyrogram
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["getlink"]))
 async def get_link(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    TRChatBase(update.from_user.id, update.text, "getlink")
+    if str(update.from_user.id) in Config.BANNED_USERS:
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.ABUSIVE_USERS,
+            reply_to_message_id=update.message_id,
+            disable_web_page_preview=True,
+            parse_mode=pyrogram.ParseMode.HTML
         )
         return
-    TRChatBase(update.from_user.id, update.text, "getlink")
     logger.info(update.from_user)
     if update.reply_to_message is not None:
         reply_message = update.reply_to_message
@@ -55,11 +57,7 @@ async def get_link(bot, update):
             message=reply_message,
             file_name=download_location,
             progress=progress_for_pyrogram,
-            progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
-            )
+            progress_args=(Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time)
         )
         download_extension = after_download_file_name.rsplit(".", 1)[-1]
         await bot.edit_message_text(
@@ -96,10 +94,12 @@ async def get_link(bot, update):
         else:
             logger.info(t_response)
             t_response_arry = t_response.decode("UTF-8").split("\n")[-1].strip()
+            shorten_api_url = "http://ouo.io/api/{}?s={}".format(Config.OUO_IO_API_KEY, t_response_arry)
+            adfulurl = requests.get(shorten_api_url).text
         await bot.edit_message_text(
             chat_id=update.chat.id,
-            text=Translation.AFTER_GET_DL_LINK.format(t_response_arry, max_days),
-            parse_mode="html",
+            text=Translation.AFTER_GET_DL_LINK.format(adfulurl, max_days),
+            parse_mode=pyrogram.ParseMode.HTML,
             message_id=a.message_id,
             disable_web_page_preview=True
         )

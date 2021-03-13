@@ -31,14 +31,14 @@ from helper_funcs.display_progress import progress_for_pyrogram
 
 @pyrogram.Client.on_message(pyrogram.filters.command(["generatescss"]))
 async def generate_screen_shot(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+    TRChatBase(update.from_user.id, update.text, "generatescss")
+    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.NOT_AUTH_USER_TEXT,
+            reply_to_message_id=update.message_id
         )
         return
-    TRChatBase(update.from_user.id, update.text, "generatescss")
     if update.reply_to_message is not None:
         download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
@@ -52,9 +52,7 @@ async def generate_screen_shot(bot, update):
             file_name=download_location,
             progress=progress_for_pyrogram,
             progress_args=(
-                Translation.DOWNLOAD_START,
-                a,
-                c_time
+                Translation.DOWNLOAD_START, a.message_id, update.chat.id, c_time
             )
         )
         if the_real_download_location is not None:
@@ -83,7 +81,7 @@ async def generate_screen_shot(bot, update):
             media_album_p = []
             if images is not None:
                 i = 0
-                caption = "© @midukkandl_bot"
+                caption = "© @AnyDLBot"
                 for image in images:
                     if os.path.exists(image):
                         if i == 0:
