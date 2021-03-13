@@ -10,4 +10,3 @@ tgcrypto
 youtube-dl
 pydrive
 pySmartDL
-ffmpeg-python

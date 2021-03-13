@@ -1,29 +1,22 @@
-## [AnyDLBot](https://telegram.dog/midukkandl_bot)
+## [AnyDLBot](https://telegram.dog/AnyDLBot)
 ---
 
-**There are multiple things I can do**:
+An Open Source ALL-In-One Telegram RoBot, that can do lot of things.
 
-👉 All Supported Video Formats of https://rg3.github.io/youtube-dl/supportedsites.html
+## Credits, and Thanks to
 
-👉 Upload as file from any HTTP link
-
-👉 Convert To Streamable Video, any Telegram media
-
-👉 ReName Telegram files, with custom thumbnail support
-
-👉 Get High Speed Direct Download Link of any Telegram file
+* [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
+* [Yoily](https://telegram.dog/YoilyL) for his [UploaditBot](https://telegram.dog/UploaditBot)
 
 ### Installation
 
 #### The Easiest Way
 
-**upgrade** your subscription for [@AnyDLBot #V2](https://telegram.dog/midukkandl_bot) without having to run anything on your own
+**upgrade** your subscription for [@AnyDLBot](https://telegram.dog/AnyDLBot) without having to run anything on your own
 
 #### The Easy Way
 
-[![](http://ouo.io/images/banners/r1.jpg "ouo.io - Make short links and earn the biggest money")](http://ouo.io/ref/ROXeyb0X)
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ALENTL/AnyDLBot)
 
 #### The Hard Way
 
@@ -36,7 +29,8 @@ cp sample_config.py config.py
 python bot.py
 ```
 
-- For FeedBack and Suggestions, please feel free to say in [@SpEcHlDe](https://telegram.dog/ShrimadhaVahdamirhS)
+- For FeedBack and Suggestions, please feel free to say in [@SpEcHlDe](https://telegram.dog/ThankTelegram)
+- If you liked the project please mention [@ALENTL](https://t.me/ALEN_TL) 
 
 #### LICENSE
 - GPLv3

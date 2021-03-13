@@ -33,36 +33,19 @@ from helper_funcs.help_uploadbot import DownLoadFile
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
+    if update.from_user.id not in Config.AUTH_USERS:
+        await bot.delete_messages(
+            chat_id=update.chat.id,
+            message_ids=update.message_id,
+            revoke=True
+        )
+        return
     # logger.info(update)
     TRChatBase(update.from_user.id, update.text, "/echo")
     # await bot.send_chat_action(
     #     chat_id=update.chat.id,
     #     action="typing"
     # )
-    if str(update.from_user.id) in Config.BANNED_USERS:
-        await bot.edit_message_text(
-            chat_id=update.message.chat.id,
-            text=Translation.ABUSIVE_USERS,
-            message_id=update.message.message_id,
-            disable_web_page_preview=True,
-            parse_mode="html"
-        )
-        return
-    if str(update.from_user.id) not in Config.UTUBE_BOT_USERS:
-        # restrict free users from sending more links
-        if str(update.from_user.id) in Config.ADL_BOT_RQ:
-            current_time = time.time()
-            previous_time = Config.ADL_BOT_RQ[str(update.from_user.id)]
-            Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
-            if round(current_time - previous_time) < Config.PROCESS_MAX_TIMEOUT:
-                await bot.send_message(
-                    chat_id=update.chat.id,
-                    text=Translation.FREE_USER_LIMIT_Q_SZE,
-                    reply_to_message_id=update.message_id
-                )
-                return
-        else:
-            Config.ADL_BOT_RQ[str(update.from_user.id)] = time.time()
     logger.info(update.from_user)
     url = update.text
     youtube_dl_username = None
@@ -105,7 +88,7 @@ async def echo(bot, update):
                 o = entity.offset
                 l = entity.length
                 url = url[o:o + l]
-    if ("hotstar.com" in url) and (Config.HTTP_PROXY != ""):
+    if Config.HTTP_PROXY != "":
         command_to_exec = [
             "youtube-dl",
             "--no-warnings",

@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 
 import os
 import requests
-
+import time
 def DetectFileSize(url):
     r = requests.get(url, allow_redirects=True, stream=True)
     total_size = int(r.headers.get("content-length", 0))
@@ -20,6 +20,8 @@ def DetectFileSize(url):
 def DownLoadFile(url, file_name, chunk_size, client, ud_type, message_id, chat_id):
     if os.path.exists(file_name):
         os.remove(file_name)
+    if not url:
+        return file_name
     r = requests.get(url, allow_redirects=True, stream=True)
     # https://stackoverflow.com/a/47342052/4723940
     total_size = int(r.headers.get("content-length", 0))

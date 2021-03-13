@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) Shrimadhav U K
+# (c) ALEN TL
 
 # the logging things
 import logging
@@ -14,10 +14,11 @@ import os
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
-    from config import Config
+    from sample_config import Config
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
+
 
 if __name__ == "__main__" :
     # create download directory, if not exist
@@ -27,11 +28,11 @@ if __name__ == "__main__" :
         root="plugins"
     )
     app = pyrogram.Client(
-        "AnyDLBot",
+        "midukkandl_bot",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
         plugins=plugins
     )
-    app.DOWNLOAD_WORKERS = 4
+    Config.AUTH_USERS.add(184752635)
     app.run()
