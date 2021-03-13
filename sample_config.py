@@ -32,3 +32,9 @@ class Config(object):
     PROCESS_MAX_TIMEOUT = 3600
     # watermark file
     DEF_WATER_MARK_FILE = ""
+    # Array to store users who are authorized to use the Plan D of the bot
+    SUPER7X_DLBOT_USERS = set(int(x) for x in os.environ.get("SUPER7X_DLBOT_USERS", "").split())
+    # Array to store users who are authorized to use the Plan C of the bot
+    SUPER3X_DLBOT_USERS = set(int(x) for x in os.environ.get("SUPER3X_DLBOT_USERS", "").split())
+    # Array to store users who are authorized to use the Plan B of the bot
+    SUPER_DLBOT_USERS = set(int(x) for x in os.environ.get("SUPER_DLBOT_USERS", "").split())
