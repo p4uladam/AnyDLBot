@@ -24,7 +24,7 @@ Price 🇮🇳: ₹ 38 / 28 Days
 
 FEATURES:
 👉All Above Features +
-👉[All Supported Video Formats of](https://rg3.github.io/youtube-dl/supportedsites.html), [except HLS videos!](https://t.me/SpEcHlDe/608)
+[👉All Supported Video Formats of](https://rg3.github.io/youtube-dl/supportedsites.html), [except HLS videos!](https://t.me/SpEcHlDe/608)
 👉[Upload as file from any HTTP link, with custom thumbnail support](https://t.me/SpEcHlDe/609)
 -------
 Plan: C
