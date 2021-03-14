@@ -14,8 +14,8 @@ Filesize limit: 1500 MB
 Daily limit: UNLIMITED
 Price 🌎: ₹ 0 / 30 Days
 FEATURES:
-👉[Get a Telegram sticker as a Telegram downloadable media](https://t.me/SpEcHlDe/660)
-👉[Get Low Speed Direct Download Link of any Telegram file](https://t.me/SpEcHlDe/611)
+👉Get a Telegram sticker as a Telegram downloadable media
+👉Get Low Speed Direct Download Link of any Telegram file
 -------
 Plan: B
 Filesize limit: 1500 MB
@@ -24,8 +24,8 @@ Price 🇮🇳: ₹ 38 / 28 Days
 
 FEATURES:
 👉All Above Features +
-[👉All Supported Video Formats of](https://rg3.github.io/youtube-dl/supportedsites.html), [except HLS videos!](https://t.me/SpEcHlDe/608)
-👉[Upload as file from any HTTP link, with custom thumbnail support](https://t.me/SpEcHlDe/609)
+👉All Supported Video Formats , except HLS videos!
+👉Upload as file from any HTTP link, with custom thumbnail support
 -------
 Plan: C
 Filesize limit: 1500 MB
@@ -33,9 +33,9 @@ Daily limit: UNLIMITED
 
 FEATURES:
 👉All Above Features +
-👉[Convert To Telegram Audio, the media sent as Telegram Documents](https://telegram.dog/midukkandl_bot)
-👉[Convert To Streamable Video, any Telegram file](https://telegram.dog/midukkandl_bot)
-👉[ReName Telegram files, with custom thumbnail support](https://t.me/SpEcHlDe/610)
+👉Convert To Telegram Audio, the media sent as Telegram Documents
+👉Convert To Streamable Video, any Telegram file
+👉ReName Telegram files, with custom thumbnail support
 -------
 Plan: D
 Filesize limit: 1500 MB
@@ -43,9 +43,9 @@ Daily limit: UNLIMITED
 
 FEATURES:
 👉All Above Features +
-👉[Generate Custom Thumbnail by sending two photos in a Media Album](https://t.me/SpEcHlDe/625)
-👉[Trim large videos](https://t.me/SpEcHlDe/653), [and Take Screenshots](https://t.me/SpEcHlDe/652) of Telegram media files.
-👉[Extract compressed Telegram media](https://t.me/SpEcHlDe/657)
+👉Generate Custom Thumbnail by sending two photos in a Media Album
+👉Trim large videos, and Take Screenshots of Telegram media files.
+👉Extract compressed Telegram media
 👉PLUS, all newly features that are going to be added in the future*.
 -------
 @midukkandl_bot reserves the rights to change the benefits of plans, at anytime.
