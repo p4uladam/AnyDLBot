@@ -50,7 +50,7 @@ FEATURES:
 -------
 @midukkandl_bot reserves the rights to change the benefits of plans, at anytime.
 -------
-NOTE: After payment you must take screenshot of receipt and send to @aleNTLbot with your Telegram ID obtained from /me
+NOTE: After payment you must take screenshot of receipt and send to @ALEN_TL with your Telegram ID obtained from /me
 Please Message from the ID you want plan to be activated 🙏"""
 
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
