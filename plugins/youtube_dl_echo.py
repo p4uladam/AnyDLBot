@@ -34,10 +34,10 @@ from helper_funcs.help_uploadbot import DownLoadFile
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     if update.from_user.id not in Config.AUTH_USERS:
-        await bot.delete_messages(
+        await bot.send_message(
             chat_id=update.chat.id,
-            message_ids=update.message_id,
-            revoke=True
+            text=Translation.NOT_AUTH_USER_TEXT,
+            reply_to_message_id=update.message_id
         )
         return
     # logger.info(update)
