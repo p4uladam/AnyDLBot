@@ -33,7 +33,9 @@ from helper_funcs.help_uploadbot import DownLoadFile
 
 @pyrogram.Client.on_message(pyrogram.filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
-    if update.from_user.id not in Config.AUTH_USERS or Config.SUPER7X_DLBOT_USERS:
+    if update.from_user.id not in (
+        Config.AUTH_USERS, Config.SUPER7X_DLBOT_USERS
+        ):
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.NOT_AUTH_USER_TEXT,
