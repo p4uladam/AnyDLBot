@@ -61,6 +61,8 @@ async def get_link(bot, update):
                 c_time
             )
         )
+        rename_download_file_name = after_download_file_name.rsplit("/", 14)[-1]
+        new_name_given = rename_download_file_name[:-4].strip()
         download_extension = after_download_file_name.rsplit(".", 1)[-1]
         await bot.edit_message_text(
             text=Translation.SAVED_RECVD_DOC_FILE,
@@ -68,7 +70,7 @@ async def get_link(bot, update):
             message_id=a.message_id
         )
         end_one = datetime.now()
-        url = "https://transfer.sh/{}.{}".format(str(update.message_id), str(download_extension))
+        url = "https://transfer.sh/{}.{}".format(str(new_name_given), str(download_extension))
         max_days = "5"
         command_to_exec = [
             "curl",
