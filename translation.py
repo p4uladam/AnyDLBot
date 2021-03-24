@@ -31,15 +31,24 @@ Telegram ID: <code>{}</code>
 Plan name: <a href='https://t.me/SpEcHlDe/599'>{}</a>
 Expires on: {}"""
     HELP_USER = """There are multiple things I can do:
-👉 <a href="https://t.me/SpEcHlDe/608">All Supported Video / File Formats, with custom file name and custom thumbnail support</a>
-👉 <a href="https://t.me/SpEcHlDe/609">Upload as file from any HTTP link, with custom thumbnail support</a>
-👉 <a href="https://telegram.dog/midukkandl_bot">Convert To Streamable Video, any Telegram file</a>
-👉 <a href="https://telegram.dog/midukkandl_bot">Convert To Telegram Audio, the media sent as Telegram Documents</a>
-👉 <a href="https://t.me/SpEcHlDe/610">ReName Telegram files, with custom thumbnail support</a>
-👉 <a href="https://t.me/SpEcHlDe/625">Generate Custom Thumbnail by sending two photos in a Media Album</a>
-👉 <a href="https://t.me/SpEcHlDe/653">Trim large videos</a>, and <a href="https://t.me/SpEcHlDe/652">Take Screenshots</a> of Telegram media files.
-👉 <a href="https://t.me/SpEcHlDe/657">Extract compressed Telegram media</a>
-👉 <a href="https://t.me/SpEcHlDe/660">Get a Telegram sticker as a Telegram downloadable media</a>
+/start - Check if the Bot is Online!
+/help - How to use this Bot?
+/me - Check Your Subscription
+/upgrade - Upgrade your Subscription
+/deletethumbnail - Delete/Clear saved Custom Thumbnail
+/getlink - Get Low Speed Direct Download Link
+/converttoaudio - Convert Video Files to Telegram Audios
+/converttovideo - Convert to Streamable Video
+/rename - (Long Press) and Rename Telegram Media
+/extractstreams - Extract Streams from Telegram Media
+/ffmpegrobot - Get Info
+/trim - (Long Press) and Enter Timestamp
+/downloadmedia - Download media to storage
+/storageinfo - Get Info about currently saved Media in storage
+/clearffmpegmedia - Clear stored media from storage
+/unzip - Extract Compressed Files, inside Telegram
+/generatecustomthumbnail - Generate customer thumbnail For your Streamable Video
+/generatescss - Get Screenshot of Telegram Media
 --------
 Send /me to know current plan details"""
     REPLY_TO_DOC_GET_LINK = "Reply to a Telegram media to get High Speed Direct Download Link"
