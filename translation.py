@@ -1,5 +1,6 @@
 class Translation(object):
-    START_TEXT = """Hi, This is IU. Thank You for using me.
+    START_TEXT = """Hi, This is IU. KN Personal Bot ❤️.
+(Reworked Version by KN 🚀️)
 /help to know how to use me
 """
     RENAME_403_ERR = "Sorry. You are not permitted to rename this file."
@@ -9,12 +10,12 @@ class Translation(object):
     FORMAT_SELECTION = "Select the desired format: <a href='{}'>file size might be approximate</a> \nIf you want to set custom thumbnail, send photo before or quickly after tapping on any of the below buttons.\nYou can use /deletethumbnail to delete the auto-generated thumbnail."
     SET_CUSTOM_USERNAME_PASSWORD = """If you want to download premium videos, provide in the following format: URL | filename | username | password"""
     NOYES_URL = "@robot URL detected. Please use https://shrtz.me/PtsVnf6 and get me a fast URL so that I can upload to Telegram, without me slowing down for other users."
-    DOWNLOAD_START = "trying to download"
-    UPLOAD_START = "trying to upload"
+    DOWNLOAD_START = "Trying to Download"
+    UPLOAD_START = "Trying to Upload"
     RCHD_BOT_API_LIMIT = "size greater than maximum allowed size (50MB). Neverthless, trying to upload."
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry. But, I cannot upload files greater than 1.5GB due to Telegram API limitations."
-    AFTER_SUCCESSFUL_UPLOAD_MSG = "[Please donate me if you find me useful](https://paypal.me/ALENTL)"
-    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \n[Please donate me if you find me useful.](https://paypal.me/ALENTL)\nUploaded in {} seconds."
+    AFTER_SUCCESSFUL_UPLOAD_MSG = "Reworked Version by KN 🚀️"
+    AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds. \nThanks For Using Me\nUploaded in {} seconds."
     NOT_AUTH_USER_TEXT = "Please /upgrade your subscription."
     NOT_AUTH_USER_TEXT_FILE_SIZE = "Detected File Size: {}. Free Users can only upload: {}\nPlease /upgrade your subscription.\nIf you think this is a bug, please contact <a href='https://telegram.dog/ThankTelegram'>@ALEN_TL</a>"
     SAVED_CUSTOM_THUMB_NAIL = "Custom video / file thumbnail saved. This image will be used in the video / file."
@@ -28,7 +29,7 @@ class Translation(object):
     CURENT_PLAN_DETAILS = """Current plan details
 --------
 Telegram ID: <code>{}</code>
-Plan name: <a href='https://t.me/SpEcHlDe/599'>{}</a>
+Plan name: Ulimate Megma Edition User
 Expires on: {}"""
     HELP_USER = """There are multiple things I can do:
 /start - Check if the Bot is Online!
