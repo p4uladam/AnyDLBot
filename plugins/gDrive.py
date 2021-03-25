@@ -53,13 +53,13 @@ def g_auth(bot, update):
 @pyrogram.Client.on_message(pyrogram.filters.command(["gsetup"]))
 def g_setup(bot, update):
     TRChatBase(update.from_user.id, update.text, "gsetup")
-    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
-            reply_to_message_id=update.message_id
-        )
-        return
+#     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
+#         bot.send_message(
+#             chat_id=update.chat.id,
+#             text=Translation.NOT_AUTH_USER_TEXT,
+#             reply_to_message_id=update.message_id
+#         )
+#         return
     recvd_commands = update.command
     if len(recvd_commands) == 2:
         cmnd, auth_code = recvd_commands
