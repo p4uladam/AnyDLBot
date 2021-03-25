@@ -61,7 +61,7 @@ async def get_link(bot, update):
                 c_time
             )
         )
-        rename_download_file_name = after_download_file_name.rsplit("/", 14)[-1]
+        rename_download_file_name = after_download_file_name.rsplit("].")[-1]
         new_name_given = rename_download_file_name[:-4].strip()
         download_extension = after_download_file_name.rsplit(".", 1)[-1]
         await bot.edit_message_text(
