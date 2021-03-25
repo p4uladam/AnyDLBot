@@ -61,7 +61,7 @@ async def get_link(bot, update):
                 c_time
             )
         )
-        rename_download_file_name = after_download_file_name.rsplit("].")[-1]
+        rename_download_file_name = after_download_file_name.rsplit("/", 14)[-1]
         new_name_given = rename_download_file_name[:-4].strip()
         download_extension = after_download_file_name.rsplit(".", 1)[-1]
         await bot.edit_message_text(
@@ -74,6 +74,7 @@ async def get_link(bot, update):
         max_days = "5"
         command_to_exec = [
             "curl",
+            "--globoff",
             # "-H", 'Max-Downloads: 1',
             "-H", 'Max-Days: 5', # + max_days + '',
             "--upload-file", after_download_file_name,
