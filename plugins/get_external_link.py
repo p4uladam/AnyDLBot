@@ -81,6 +81,7 @@ async def get_link(bot, update):
 #             "--upload-file", after_download_file_name,
 #             url
 #         ]
+
           command_to_exec = [
               "curl",
               "--globoff",
