@@ -33,13 +33,13 @@ from pydrive.auth import GoogleAuth
 @pyrogram.Client.on_message(pyrogram.filters.command(["gauth"]))
 def g_auth(bot, update):
     TRChatBase(update.from_user.id, update.text, "gauth")
-    if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
-        bot.send_message(
-            chat_id=update.chat.id,
-            text=Translation.NOT_AUTH_USER_TEXT,
-            reply_to_message_id=update.message_id
-        )
-        return
+#     if str(update.from_user.id) not in Config.SUPER7X_DLBOT_USERS:
+#         bot.send_message(
+#             chat_id=update.chat.id,
+#             text=Translation.NOT_AUTH_USER_TEXT,
+#             reply_to_message_id=update.message_id
+#         )
+#         return
     Config.G_DRIVE_AUTH_DRQ[str(update.from_user.id)] = GoogleAuth()
     auth_url = Config.G_DRIVE_AUTH_DRQ[str(update.from_user.id)].GetAuthUrl()
     # Create authentication url user needs to visit
