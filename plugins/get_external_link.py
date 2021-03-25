@@ -71,7 +71,7 @@ async def get_link(bot, update):
         )
         end_one = datetime.now()
         # url = "https://transfer.sh/{}.{}".format(str(new_name_given), str(download_extension))
-        url = "https://srv-store1.gofile.io/uploadFile
+        url = "https://srv-store1.gofile.io/uploadFile"
         max_days = "5"
 #         command_to_exec = [
 #             "curl",
