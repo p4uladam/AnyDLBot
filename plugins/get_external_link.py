@@ -82,12 +82,13 @@ async def get_link(bot, update):
 #             url
 #         ]
           command_to_exec = [
-                "curl",
-                "-F", "file[]=@"+after_download_file_name,
-                "-F", "category=file", 
-                "-F", "comments=0",
-                url
-            ]
+              "curl",
+              "--globoff",
+              "-F", "file[]=@"+after_download_file_name,
+              "-F", "category=file", 
+              "-F", "comments=0",
+              url
+          ]
         await bot.edit_message_text(
             text=Translation.UPLOAD_START,
             chat_id=update.chat.id,
