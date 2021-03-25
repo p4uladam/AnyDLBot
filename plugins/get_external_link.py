@@ -109,7 +109,8 @@ async def get_link(bot, update):
         else:
             logger.info(t_response)
             #t_response_arry = t_response.decode("UTF-8").split("\n")[-1].strip()
-            t_json_array = json.loads(t_response)
+            t_json_str = json.dumps(t_response)
+            t_json_array = json.loads(t_json_str)
             t_json_decode = t_json_array["data"]
             t_res_page = t_json_decode["downloadPage"]
         await bot.edit_message_text(
