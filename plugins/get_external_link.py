@@ -73,23 +73,22 @@ async def get_link(bot, update):
         # url = "https://transfer.sh/{}.{}".format(str(new_name_given), str(download_extension))
         url = "https://srv-store1.gofile.io/uploadFile"
         max_days = "5"
-#         command_to_exec = [
-#             "curl",
-#             "--globoff",
-#             # "-H", 'Max-Downloads: 1',
-#             "-H", 'Max-Days: 5', # + max_days + '',
-#             "--upload-file", after_download_file_name,
-#             url
-#         ]
-
-          command_to_exec = [
-              "curl",
-              "--globoff",
-              "-F", "file[]=@"+after_download_file_name,
-              "-F", "category=file", 
-              "-F", "comments=0",
-              url
-          ]
+        # command_to_exec = [
+        #     "curl",
+        #     "--globoff",
+        #     # "-H", 'Max-Downloads: 1',
+        #     "-H", 'Max-Days: 5', # + max_days + '',
+        #     "--upload-file", after_download_file_name,
+        #     url
+        # ]
+        command_to_exec = [
+            "curl",
+            "--globoff",
+            "-F", "file[]=@"+after_download_file_name,
+            "-F", "category=file", 
+            "-F", "comments=0",
+            url
+        ]
         await bot.edit_message_text(
             text=Translation.UPLOAD_START,
             chat_id=update.chat.id,
