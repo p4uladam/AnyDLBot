@@ -71,25 +71,25 @@ async def get_link(bot, update):
             message_id=a.message_id
         )
         end_one = datetime.now()
-        # url = "https://transfer.sh/{}.{}".format(str(new_name_given), str(download_extension))
-        url = "https://srv-store1.gofile.io/uploadFile"
+        url = "https://transfer.sh/{}.{}".format(str(new_name_given), str(download_extension))
+        #url = "https://srv-store1.gofile.io/uploadFile"
         max_days = "5"
-        # command_to_exec = [
-        #     "curl",
-        #     "--globoff",
-        #     # "-H", 'Max-Downloads: 1',
-        #     "-H", 'Max-Days: 5', # + max_days + '',
-        #     "--upload-file", after_download_file_name,
-        #     url
-        # ]
         command_to_exec = [
             "curl",
             "--globoff",
-            "-F", "file[]=@"+after_download_file_name,
-            "-F", "category=file", 
-            "-F", "comments=0",
+            # "-H", 'Max-Downloads: 1',
+            "-H", 'Max-Days: 5', # + max_days + '',
+            "--upload-file", after_download_file_name,
             url
         ]
+#         command_to_exec = [
+#             "curl",
+#             "--globoff",
+#             "-F", "file[]=@"+after_download_file_name,
+#             "-F", "category=file", 
+#             "-F", "comments=0",
+#             url
+#         ]
         await bot.edit_message_text(
             text=Translation.UPLOAD_START,
             chat_id=update.chat.id,
@@ -115,7 +115,7 @@ async def get_link(bot, update):
         await bot.edit_message_text(
             chat_id=update.chat.id,
             # text=Translation.AFTER_GET_DL_LINK.format(t_response_arry, max_days),
-            text=Translation.AFTER_GET_DL_LINK.format(t_res_page, max_days),
+            text=Translation.AFTER_GET_DL_LINK.format(t_response_arry, max_days),
             parse_mode="html",
             message_id=a.message_id,
             disable_web_page_preview=True
